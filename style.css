@@ -1,0 +1,124 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    display: flex; 
+    justify-content: center; 
+    padding-top: 50px; 
+}
+
+.contenedor-lista { 
+    width: 90%; 
+    margin: auto; 
+    background: #fff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+h2 { 
+    text-align: center; 
+    color: #333; 
+}
+/*empleados_alta.php*/
+.contenedor-alta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-alta {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/*empleados_lista.php*/
+.fila { 
+    display: flex; 
+    border-bottom: 1px solid #ddd; 
+    padding: 10px 0; 
+    align-items: center; 
+}
+
+.cabecera { 
+    font-weight: bold; 
+    background-color: #eee; 
+    border-bottom: 2px solid #ccc; 
+}
+
+.col-accion input[type="button"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.col-accion input[type="button"]:hover {
+    background-color: #a71d2a;
+}
+
+.col-accion a {
+    text-decoration: none;
+    color: #5916e0;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.col-id { width: 5%; text-align: center; }
+.col-nombre { width: 25%; }
+.col-correo { width: 25%; }
+.col-rol { width: 15%; text-align: center; }
+.col-accion { width: 10%; text-align: center; color: #999; }
+
+/*empleados_detalle.php*/
+.btn-regresar { 
+    display: inline-block; 
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 4px;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+.card { 
+    background: #fff; 
+    width: 500px; 
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.titulo { 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #333; /*Franja negra divisora*/
+    padding-bottom: 10px; 
+    text-align: center; 
+}
+
+.info-contenedor { 
+    margin-bottom: 15px; 
+    display: flex; 
+}
+
+.label { 
+    font-weight: bold; 
+    width: 150px; 
+    color: #555; 
+}
+
+.valor { 
+    color: #000; 
+    flex: 1; 
+}
