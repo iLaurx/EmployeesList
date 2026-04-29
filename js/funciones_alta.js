@@ -27,8 +27,8 @@ function validarFormulario() {
     var archivo   = $('#archivo').val(); // Capturamos el valor del input file
 
     // Validar campos llenos + la FOTO (que es obligatoria en alta)
-    if (nombre == "" || apellidos == "" || correo == "" || pass == "" || rol == "0" || archivo == "") {
-        $('#error-campos').html('Faltan campos por llenar (incluyendo la foto)');
+    if (nombre == "" || apellidos == "" || correo == "" || pass == "" || rol == "0") {
+        $('#error-campos').html('Faltan campos por llenar');
         setTimeout(function() { $('#error-campos').html(''); }, 5000);
     } else {
         // Usamos FormData para enviar el archivo

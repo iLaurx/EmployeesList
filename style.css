@@ -1,7 +1,7 @@
 body { 
     font-family: Arial, sans-serif; 
     background-color: #f4f4f4; 
-    display: flex; 
+    display: flex; /*flex*/ 
     justify-content: center; 
     padding-top: 50px; 
 }
@@ -19,6 +19,36 @@ h2 {
     text-align: center; 
     color: #333; 
 }
+
+.btn-enter {
+    text-decoration: none;
+    color: #5916e0;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*index.php*/
+.mensaje {
+    color: rgb(39, 40, 101); 
+    font-weight: bold; 
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contenedor-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 20px auto;     
+}
+
 /*empleados_alta.php*/
 .contenedor-alta {
     display: flex;

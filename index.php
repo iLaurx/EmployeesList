@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Login del Sistema</title>
@@ -8,17 +6,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Iniciar Sesión</h2> 
-    <form id="formaLogin">
-        <label>Correo electrónico:</label><br>
-        <input type="email" id="correo" name="correo"><br><br>
-        
-        <label>Contraseña:</label><br>
-        <input type="password" id="pass" name="pass"><br><br>
-        
-        <button type="button" onclick="validarLogin()">Entrar</button>
-    </form>
+    <div class="contenedor-login">
+        <h2 class="titulo">Iniciar Sesión</h2>
+        <form id="formaLogin">
+            <label>Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo"><br><br>
+            
+            <label>Contraseña:</label><br>
+            <input type="password" id="pass" name="pass"><br><br>
+            
+            <button type="button" onclick="validarLogin()" class="btn-enter">Entrar</button>
+        </form>
+        <div id="mensaje" class="mensaje"></div>
+    </div>
     
-    <div id="mensaje" style="color: red; font-weight: bold; margin-top: 15px;"></div>
 </body>
 </html>
