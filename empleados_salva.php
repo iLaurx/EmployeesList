@@ -27,7 +27,7 @@ if ($id > 0) {
     
     if (!empty($pass)) {
         $pass_enc = md5($pass);
-        $sql .= ", password='$pass_enc'";
+        $sql .= ", pass='$pass_enc'"; 
     }
     // Solo si se subió una foto nueva, la actualizamos
     if ($archivo_n != "") {
@@ -36,9 +36,9 @@ if ($id > 0) {
     
     $sql .= " WHERE id = $id";
 } else {
-    // --- INSERT ---
+    // Fragmento del INSERT:
     $pass_enc = md5($pass);
-    $sql = "INSERT INTO usuarios (nombre, apellidos, correo, password, rol, archivo) 
+    $sql = "INSERT INTO usuarios (nombre, apellidos, correo, pass, rol, archivo) 
             VALUES ('$nombre', '$apellidos', '$correo', '$pass_enc', '$rol', '$archivo_n')";
 }
 

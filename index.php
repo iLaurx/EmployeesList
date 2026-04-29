@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Login del Sistema</title>
@@ -6,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Iniciar Sesión<br> 
+    <h2>Iniciar Sesión</h2> 
     <form id="formaLogin">
         <label>Correo electrónico:</label><br>
         <input type="email" id="correo" name="correo"><br><br>
