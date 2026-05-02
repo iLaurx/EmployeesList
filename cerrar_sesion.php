@@ -1,5 +1,5 @@
 <?php
-//cerrar_sesion.ph
+//cerrar_sesion.php
 session_start();
 session_destroy();
 header("Location: index.php")
