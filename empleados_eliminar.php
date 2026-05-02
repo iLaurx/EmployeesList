@@ -5,7 +5,7 @@ $con = conecta();
 
 $id = $_POST['id'];
 
-// Hacemos el UPDATE (Borrado lógico)
+// Hacemos el UPDATE
 $sql = "UPDATE usuarios SET eliminado = 1 WHERE id = $id";
 $res = $con->query($sql);
 
