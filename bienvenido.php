@@ -2,6 +2,10 @@
 // Iniciar la sesión para poder acceder a las variables
 session_start();
 // Validamos si existe la variable para evitar errores (por si entran directo)
+if (!isset($_SESSION['idUser'])) {
+    header("Location: index.php");
+    exit;
+}
 $nombre = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'Usuario';
 ?> 
 

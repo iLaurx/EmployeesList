@@ -40,7 +40,7 @@ $status         = ($row['status'] == 1) ? "Activo" : "Inactivo";
 </head>
 <body>
 <?php include 'menu.php'; ?>
-<a href="empleados_lista.php" style="display: inline-block; margin: 10px 0; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Regresar al Listado</a>
+ 
 <br><br>
 
 <div class="card">
