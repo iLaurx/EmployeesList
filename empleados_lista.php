@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (isset($_SESSION['idUser'])) {
+    header("Location: bienvenido.php");
+    exit;
+}
+
 require "funciones/conecta.php";
 $con = conecta();
 
@@ -7,6 +14,7 @@ $res = $con->query($sql);
 $num = $res->num_rows;
 ?>
 
+
 <head>
     <title>Lista de Empleados</title>
     <link rel="stylesheet" href="style.css">
@@ -14,7 +22,7 @@ $num = $res->num_rows;
     <script src="js/elimina_empleados.js"></script>
 </head>
 <body>
-
+<?php include 'menu.php'; ?>
 <div class="contenedor-lista">
     <div class="titulo">Lista de empleados (<?php echo $num; ?>)</div>
     <div class="contenedor-alta">

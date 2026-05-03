@@ -1,10 +1,10 @@
 <?php
 // Iniciar la sesión para poder acceder a las variables
 session_start();
-
 // Validamos si existe la variable para evitar errores (por si entran directo)
 $nombre = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'Usuario';
 ?> 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +13,7 @@ $nombre = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'Usuario';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php include 'menu.php'; ?>
     <div class="contenedor-bienvenida">
         <h1>Hola, bienvenido al sistema.</h1>
         <h2><?php echo $nombre; ?></h2>

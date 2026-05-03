@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['idUser'])) {
+    header("Location: index.php");
+    exit;
+}
+
 require "funciones/conecta.php";
 $con = conecta();
 
@@ -33,6 +39,9 @@ $status         = ($row['status'] == 1) ? "Activo" : "Inactivo";
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php include 'menu.php'; ?>
+<a href="empleados_lista.php" style="display: inline-block; margin: 10px 0; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Regresar al Listado</a>
+<br><br>
 
 <div class="card">
     <div class="titulo">Detalle del Empleado</div>

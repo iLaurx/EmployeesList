@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['idUser'])) {
+    header("Location: bienvenido.php");
+    exit;
+}
+?>
+
 <head>
     <title>Alta de Empleados</title>
     <link rel="stylesheet" href="style.css">
@@ -5,7 +13,9 @@
     <script src="js/funciones_alta.js"></script>
 </head>
 <body>
-
+<?php include 'menu.php'; ?>
+<a href="empleados_lista.php" style="display: inline-block; margin: 10px 0; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Regresar al Listado</a>
+<br><br>
 <div class="contenedor-lista">
     <div class="titulo">Alta de Empleados</div>
 

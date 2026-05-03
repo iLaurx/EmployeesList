@@ -1,13 +1,15 @@
 <?php
-session_start();
-$nombreUser = $_SESSION['nombreUser'];
+// Validamos si la sesión está iniciada, si no, el nombre es genérico
+$nombreUser = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'USUARIO';
 ?>
-<table border="1" width="100%">
-    <tr>
-        <td>Bienvenido <?php echo $nombreUser;?></td>
-        <td><a href="bienvenido.php">Inicio</a></td>
-        <td><a href="empleados_lista.php">Empleados</a></td>
-        <td><a href="empleados_lista.php">Productos</a></td>
-        <td><a href="cerrar_sesion.php">Salir</a></td>
-    </tr>
-</table>
+<nav class="navegacion">
+    <a href="bienvenido.php">INICIO</a>
+    <a href="empleados_lista.php">EMPLEADOS</a>
+    <a href="productos_lista.php">PRODUCTOS</a>
+    <a href="#">CLIENTES</a>
+    <a href="#">PROMOCIONES</a>
+    <a href="#">PEDIDOS</a>
+    
+    <span style="color: #4CAF50; font-weight: bold; margin-right: 15px;">BIENVENIDO <?php echo strtoupper($nombreUser); ?></span>
+    <a href="cerrar_sesion.php" style="color: #ff4d4d;">CERRAR SESIÓN</a>
+</nav>

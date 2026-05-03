@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['idUser'])) {
+    header("Location: bienvenido.php");
+    exit;
+}
+?>
 <head>
     <meta charset="UTF-8">
     <title>Login del Sistema</title>

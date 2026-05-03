@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['idUser'])) {
+    header("Location: index.php");
+    exit;
+}
+
 require "funciones/conecta.php";
 $con = conecta();
 
@@ -12,6 +19,7 @@ $row = $res->fetch_array();
 if (!$row) { header("Location: empleados_lista.php"); exit; } 
 ?>
 
+
 <html>
 <head>
     <title>Edición de Empleados</title>
@@ -20,7 +28,9 @@ if (!$row) { header("Location: empleados_lista.php"); exit; }
     <script src="js/funciones_editar.js"></script>
 </head>
 <body>
-
+<?php include 'menu.php'; ?>
+<a href="empleados_lista.php" style="display: inline-block; margin: 10px 0; padding: 5px 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px;">Regresar al Listado</a>
+<br><br>
 <div class="contenedor-lista">
     <div class="titulo">Edición de Empleados</div>
 
