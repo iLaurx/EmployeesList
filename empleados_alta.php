@@ -5,7 +5,7 @@ if (!isset($_SESSION['idUser'])) {
     exit;
 }
 ?>
-
+<!DOCTYPE html>
 <head>
     <title>Alta de Empleados</title>
     <link rel="stylesheet" href="style.css">

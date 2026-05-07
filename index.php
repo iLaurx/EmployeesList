@@ -5,6 +5,8 @@ if (isset($_SESSION['idUser'])) {
     exit;
 }
 ?>
+
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Login del Sistema</title>

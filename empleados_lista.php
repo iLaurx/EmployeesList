@@ -1,11 +1,9 @@
 <?php
-
 session_start();
 if (!isset($_SESSION['idUser'])) {
     header("Location: index.php");
     exit;
 }
-
 require "funciones/conecta.php";
 $con = conecta();
 
@@ -14,7 +12,7 @@ $res = $con->query($sql);
 $num = $res->num_rows;
 ?>
 
-
+<!DOCTYPE html>
 <head>
     <title>Lista de Empleados</title>
     <link rel="stylesheet" href="style.css">
@@ -51,33 +49,33 @@ $num = $res->num_rows;
         $nombre_completo = $nombre . ' ' . $apellidos;
     ?>
     <div class="fila" id="fila-<?php echo $id; ?>">
-            <div class="col-id"><?php echo $id; ?></div>
-            <div class="col-nombre"><?php echo $nombre_completo; ?></div>
-            <div class="col-correo"><?php echo $correo; ?></div>
-            <div class="col-rol">
-                <?php 
-                $rol_num = $row['rol']; 
-                
-                if ($rol_num == 1) {
-                    echo "Gerente";
-                } elseif ($rol_num == 2) {
-                    echo "Ejecutivo";
-                } else {
-                    echo "No asignado";
-                }
-                ?>
-            </div>
+        <div class="col-id"><?php echo $id; ?></div>
+        <div class="col-nombre"><?php echo $nombre_completo; ?></div>
+        <div class="col-correo"><?php echo $correo; ?></div>
+        <div class="col-rol">
+            <?php 
+            $rol_num = $row['rol']; 
             
-            <div class="col-accion">
-                <a href="empleados_detalle.php?id=<?php echo $id; ?>" class=" btn-ver">Ver</a>
-            </div>
-            <div class="col-accion">
-                <a href="empleados_editar.php?id=<?php echo $id; ?>" class="btn-editar">Editar</a>
-            </div>
-            <div class="col-accion">
-                <input type="button" value="Eliminar" onclick="eliminarEmpleado(<?php echo $id; ?>);" />
-            </div>
+            if ($rol_num == 1) {
+                echo "Gerente";
+            } elseif ($rol_num == 2) {
+                echo "Ejecutivo";
+            } else {
+                echo "No asignado";
+            }
+            ?>
         </div>
+        
+        <div class="col-accion">
+            <a href="empleados_detalle.php?id=<?php echo $id; ?>" class=" btn-ver">Ver</a>
+        </div>
+        <div class="col-accion">
+            <a href="empleados_editar.php?id=<?php echo $id; ?>" class="btn-editar">Editar</a>
+        </div>
+        <div class="col-accion">
+            <input type="button" value="Eliminar" onclick="eliminarEmpleado(<?php echo $id; ?>);" />
+        </div>
+    </div>
     <?php } ?>
 </div>
 

@@ -19,7 +19,7 @@ $row = $res->fetch_array();
 if (!$row) { header("Location: empleados_lista.php"); exit; } 
 ?>
 
-
+<!DOCTYPE html>
 <html>
 <head>
     <title>Edición de Empleados</title>
