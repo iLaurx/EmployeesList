@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <title>Subir archivo</title>
 </head>
