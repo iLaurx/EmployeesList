@@ -6,7 +6,7 @@ $nombreUser = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'USUARI
     <a href="bienvenido.php">INICIO</a>
     <a href="empleados_lista.php">EMPLEADOS</a>
     <a href="productos_lista.php">PRODUCTOS</a>
-    <a href="#">CLIENTES</a>
+    <a href="clientes_lista.php">CLIENTES</a>
     <a href="promociones_lista.php">PROMOCIONES</a>
     <a href="#">PEDIDOS</a>
     
