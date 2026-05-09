@@ -48,11 +48,22 @@ if ($row = $res->fetch_array()) {
         <?php endif; ?>
         </div>
     </div>
-    
+
     <div class="info-contenedor">
         <div class="label">Nombre:</div>
         <div class="valor"><?php echo $nombre; ?></div>
     </div>
+
+    <div class="info-contenedor">
+        <div class="label">Estatus:</div>
+        <div class="valor"><?php echo $status_txt; ?></div>
+    </div>
+
+    <div class="info-contenedor">
+        <div class="label">ID:</div>
+        <div class="valor"><?php echo $id; ?></div>
+    </div>
+
     <br><br>
     <div class="contenedor-alta" style="text-align: center;">
         <a href="promociones_lista.php" class="btn-regresar">Regresar al listado</a>
