@@ -1,7 +1,7 @@
-function eliminarProducto(id) {
-    if (confirm("¿Estás seguro de eliminar este producto?")) {
+function eliminarPromocion(id) {
+    if (confirm("¿Estás seguro de eliminar esta promoción?")) {
         $.ajax({
-            url: 'productos_eliminar.php',
+            url: 'promociones_eliminar.php',
             type: 'POST',
             data: { id: id },
             success: function(res) {

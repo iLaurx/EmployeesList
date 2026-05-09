@@ -148,6 +148,38 @@ h2 {
     cursor: pointer;
 }
 
+.btn-ver, .btn-editar {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background-color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-ver:hover, .btn-editar:hover {
+    background-color: #0056b3;
+}
+
+/* Hace que cualquier botón input de tipo "button" dentro de las columnas de acción sea rojo */
+.col-accion input[type="button"],
+.colpr-accion input[type="button"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Efecto hover para el botón de eliminar */
+.col-accion input[type="button"]:hover,
+.colpr-accion input[type="button"]:hover {
+    background-color: #a71d2a;
+}
+
 .col-id { width: 5%; text-align: center; }
 .col-nombre { width: 25%; }
 .col-correo { width: 25%; }
@@ -161,6 +193,11 @@ h2 {
 .colp-costo  { width: 20%; }
 .colp-stock  { width: 20%; }
 .colp-accion { width: 10%; text-align: center; color: #999; }
+
+.colpr-id     { width: 5%; text-align: center; }
+.colpr-nombre { width: 30%; }
+.colpr-status { width: 10%; }
+.colpr-accion { width: 18.33%; text-align: center; color: #999; }
 
 /*empleados_detalle.php*/
 .btn-regresar { 

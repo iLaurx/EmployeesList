@@ -4,7 +4,6 @@ if (!isset($_SESSION['idUser'])) {
     header("Location: index.php");
     exit;
 }
-
 require "funciones/conecta.php";
 $con = conecta();
 
@@ -27,7 +26,7 @@ if ($id > 0) {
     exit;
 }
 
-// Preparamos las variables para mostrar (Traducción de valores)
+// Traduccion de valores
 $nombre         = $row['nombre'];
 $codigo         = $row['codigo'];
 $descripcion    = $row['descripcion'];
@@ -43,7 +42,6 @@ $stock          = $row['stock'];
 <?php include 'menu.php'; ?>
  
 <br><br>
-
 <div class="card">
     <div class="titulo">Detalle del Producto</div>
 

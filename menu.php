@@ -7,7 +7,7 @@ $nombreUser = isset($_SESSION['nombreUser']) ? $_SESSION['nombreUser'] : 'USUARI
     <a href="empleados_lista.php">EMPLEADOS</a>
     <a href="productos_lista.php">PRODUCTOS</a>
     <a href="#">CLIENTES</a>
-    <a href="#">PROMOCIONES</a>
+    <a href="promociones_lista.php">PROMOCIONES</a>
     <a href="#">PEDIDOS</a>
     
     <span style="color: #4CAF50; font-weight: bold; margin-right: 15px;">BIENVENIDO <?php echo strtoupper($nombreUser); ?></span>
